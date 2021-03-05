@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.login_test3">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 카메라, 갤러리 권한 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Diary_see"></activity>
+        <activity android:name=".GalleryActivity" />
+        <activity android:name=".InternetWebView" />
+        <activity android:name=".News_home" />
+        <activity android:name=".Score" />
+        <activity android:name=".Game" />
+        <activity android:name=".Game_title" />
+        <activity android:name=".Password_find" />
+        <activity android:name=".Diary_edit_complete" />
+        <activity android:name=".Diary_edit" />
+        <activity android:name=".Diary_edit_box" />
+        <activity android:name=".Diary_home" />
+        <activity android:name=".Alarm_home" />
+        <activity android:name=".Memo_edit_complete" />
+        <activity android:name=".Memo_edit" />
+        <activity android:name=".Login" />
+        <activity android:name=".Promise_edit" />
+        <activity android:name=".Memo_home" />
+        <activity android:name=".Home" />
+        <activity android:name=".Profile" />
+        <activity android:name=".Profile_edit" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".BasicActivity" />
+        <activity android:name=".Startloding">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".Alarm_Receiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".Alarm_Playing_Service"
+            android:enabled="true" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4274260023899404~2892680433" />
+    </application>
+
+</manifest>

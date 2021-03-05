@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <include
+        layout="@layout/view_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/home_diary_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/journal" />
+
+    <ImageButton
+        android:id="@+id/home_memo_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/memo" />
+
+    <ImageButton
+        android:id="@+id/home_alarm_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/home_diary_btn"
+        app:layout_constraintStart_toStartOf="@+id/home_diary_btn"
+        app:layout_constraintTop_toBottomOf="@+id/home_diary_text"
+        app:srcCompat="@drawable/clocks" />
+
+    <TextView
+        android:id="@+id/my_diary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/nanumpen"
+        android:text="My Diary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/home_diary_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/nanumpen"
+        android:text="일기"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/home_diary_btn"
+        app:layout_constraintStart_toStartOf="@+id/home_diary_btn"
+        app:layout_constraintTop_toBottomOf="@+id/home_diary_btn" />
+
+    <TextView
+        android:id="@+id/home_memo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/nanumpen"
+        android:text="메모"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/home_memo_btn"
+        app:layout_constraintStart_toStartOf="@+id/home_memo_btn"
+        app:layout_constraintTop_toBottomOf="@+id/home_memo_btn" />
+
+    <TextView
+        android:id="@+id/home_alarm_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/nanumpen"
+        android:text="알람"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/home_alarm_but"
+        app:layout_constraintStart_toStartOf="@+id/home_alarm_but"
+        app:layout_constraintTop_toBottomOf="@+id/home_alarm_but" />
+
+    <ImageButton
+        android:id="@+id/home_news_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/home_memo_btn"
+        app:layout_constraintStart_toStartOf="@+id/home_memo_btn"
+        app:layout_constraintTop_toBottomOf="@+id/home_memo_text"
+        app:srcCompat="@drawable/newspaper" />
+
+    <TextView
+        android:id="@+id/home_news_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/nanumpen"
+        android:text="뉴스"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/home_news_btn"
+        app:layout_constraintStart_toStartOf="@+id/home_news_btn"
+        app:layout_constraintTop_toBottomOf="@+id/home_news_btn" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_diary">
+
+        <TextView
+            android:id="@+id/promise"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/nanumpen"
+            android:gravity="center_vertical"
+            android:text="[오늘의 다짐]"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/promise_set_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/nanumpen"
+            android:gravity="center_vertical" />
+
+        <Button
+            android:id="@+id/promise_set_btn"
+            android:layout_width="49dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/nanumpen"
+            android:text="수정"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/home_profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/home_news_btn"
+        app:layout_constraintStart_toStartOf="@+id/home_news_btn"
+        app:layout_constraintTop_toBottomOf="@+id/home_news_text"
+        app:srcCompat="@drawable/iconfinder2" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/nanumpen"
+        android:text="프로필"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/home_profile_btn"
+        app:layout_constraintStart_toStartOf="@+id/home_profile_btn"
+        app:layout_constraintTop_toBottomOf="@+id/home_profile_btn" />
+
+    <ImageButton
+        android:id="@+id/home_game_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/home_alarm_but"
+        app:layout_constraintStart_toStartOf="@+id/home_alarm_but"
+        app:layout_constraintTop_toBottomOf="@+id/home_alarm_text"
+        app:srcCompat="@drawable/game_controller" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/nanumpen"
+        android:text="간단 게임"
+        app:layout_constraintEnd_toEndOf="@+id/home_game_btn"
+        app:layout_constraintStart_toStartOf="@+id/home_game_btn"
+        app:layout_constraintTop_toBottomOf="@+id/home_game_btn" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"></com.google.android.gms.ads.AdView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

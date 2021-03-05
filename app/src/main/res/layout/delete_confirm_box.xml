@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2A2A2A"
+        android:gravity="center"
+        android:fontFamily="@font/nanumpen"
+        android:text="회원탈퇴"
+        android:textColor="#ffffff"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumpen"
+        android:gravity="center"
+        android:text="회원탈퇴시, 기존에 작성한 모든 일기책이 저장되지 않고 삭제됩니다. \n계속해서 탈퇴하시겠습니까?"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#2A2A2A"
+            android:fontFamily="@font/nanumpen"
+            android:text="취소"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#2A2A2A"
+            android:fontFamily="@font/nanumpen"
+            android:text="확인"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+</LinearLayout>
